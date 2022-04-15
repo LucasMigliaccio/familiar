@@ -5,7 +5,7 @@ from .models import Familiar
 from django.http import HttpResponse
 # Create your views here.
 
-def base (request):
+def base(request):
     return render(request,"base.html")
 
 def familyForm(request):
@@ -14,7 +14,7 @@ def familyForm(request):
         if myform.is_valid:
             print(myform)
             familyinfo= myform.cleaned_data
-            familia= Familiar(nombre= familyinfo["Nombre"],apellido=familyinfo["Apellido"],cumpleagnos=familyinfo["Cumpleagnos"],email=familyinfo["Email"],edad=familyinfo["Edad"])
+            familia= Familiar(nombre= familyinfo["nombre"],apellido=familyinfo["apellido"],cumpleagnos=familyinfo["cumpleagnos"],email=familyinfo["email"],edad=familyinfo["edad"])
             familia.save()
             return HttpResponse(f"Familiar registrado" )
     else:

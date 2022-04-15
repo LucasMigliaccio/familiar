@@ -1,23 +1,29 @@
-{% extends 'base.html' %} 
 
+    {% extends 'base.html' %}
     
-
     {% block contenido %}
-        <h1>Agregar familiar</h1>
+
+
+        <h1>Agregar Familiar</h1>
+
         {% if myform.errors %}
 
-        <p style="color: black;">Revisa los datos </p>
+        <p style="color: greenyellow;"> Revisar los datos :P </p>
+
         {% endif %}
 
-        <form action="/agregar/" method="post">{% csrf_token %}
+        <form action="/agregar/" method="POST">{% csrf_token %}
 
+        
 
-                <table>
-                    {{myform.as_table}}
-                </table>
+            <table>
 
-            <input type="submit" value="INGRESAR"> 
-        </form>
+                {{myform.as_table}}
 
+            </table>
 
-    {% endblock contenido %}
+        <input type="submit" value="INGRESAR">
+
+    </form>
+
+{% endblock contenido%}

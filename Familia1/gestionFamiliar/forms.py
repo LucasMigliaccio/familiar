@@ -1,11 +1,11 @@
 from django import forms
 
 
-class FamiliarForm(forms.ModelForm):
+class FamiliarForm(forms.Form):
     
-    Nombre = forms.CharField(max_length=30)
-    Apellido = forms.CharField(max_length=30)
-    Cumpleagnos = forms.DateField()
-    Email= forms.EmailField()
-    Edad= forms.IntegerField()
+    nombre = forms.CharField(max_length=30)
+    apellido = forms.CharField(max_length=30)
+    cumpleagnos = forms.DateField()
+    email= forms.EmailField()
+    edad= forms.IntegerField()
     
