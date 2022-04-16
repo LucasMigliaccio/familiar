@@ -8,7 +8,14 @@
     <header>
         <h1> Familiares</h1>
     </header>
-
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href='{% url "base" %}'>Incio</a>
+            <a href='{% url "addFamiliar" %}'>Agregar Familiares</a>
+            <a href='{% url "viewFamiliar" %}'>Ver Familiares</a>
+            
+        </nav>
+    </div>
     
 {% block contenido %}
 
