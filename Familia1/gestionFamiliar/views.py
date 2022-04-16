@@ -20,3 +20,7 @@ def familyForm(request):
     else:
         myform=FamiliarForm()
     return render(request,"familiarform.html",{"myform":myform})
+
+def viewfamiliar(request):
+    fam= Familiar.objects.all()
+    return render(request, "verfamiliar.html",{"familia":fam})

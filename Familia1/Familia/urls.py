@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from gestionFamiliar.views import base, familyForm
+from gestionFamiliar.views import base, familyForm, viewfamiliar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("base/", base, name= "base" ),
     path('agregar/', familyForm, name='addFamiliar'),
+    path("ver/", viewfamiliar, name="viewFamiliar")
 ]

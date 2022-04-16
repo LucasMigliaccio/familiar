@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<table class= "table table-bordered">
+    <thead>
+        
+
+        <tr>
+            <td>#</td>
+            <td>nombre</td>
+            <td>apellido</td>
+            <td>cumpleaños</td>
+            <td>Email</td>
+            <td>edad</td>
+        </tr>
+        
+    </thead>
+    <tbody>
+        {% if familia %}
+        {% for familiar in familia %}
+        <tr>
+            <td>{{familiar.id}} </td>
+            <td>{{familiar.nombre}} </td>
+            <td>{{familiar.apellido}} </td>
+            <td>{{familiar.cumpleagnos}} </td>
+            <td>{{familiar.email}} </td>
+            <td>{{familiar.edad}} </td>
+            
+        </tr>
+        {% endfor %}
+
+        {% else %}
+        <h1> No hay registros de mascotas</h1>
+        {% endif %}
+    </tbody>
+
+
+
+</table>
+
+
+{% endblock contenido %}
